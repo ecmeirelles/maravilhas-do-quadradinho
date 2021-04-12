@@ -1,0 +1,123 @@
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: [
+    'airbnb',
+    'plugin:react/recommended',
+    'plugin:jest/recommended',
+    'plugin:promise/recommended',
+    'plugin:unicorn/recommended',
+    'plugin:react-perf/recommended',
+    'plugin:prettier/recommended',
+  ],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 12,
+    sourceType: "module",
+  },
+  plugins: [
+    'react',
+    'react-hooks',
+    'jest',
+    'promise',
+    'unicorn',
+    'react-perf',
+    'prettier',
+  ],
+  rules: {
+    "indent": ["error", 2],
+    "comma-dangle": 0,
+    "prefer-destructuring": 0,
+    'react/jsx-no-target-blank': [
+      'error',
+      {
+        enforceDynamicLinks: 'never',
+      },
+    ],
+    'wrap-regex': 'off',
+    'react/prop-types': 'warn',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'off',
+    'import/prefer-default-export': 'off',
+    'react/jsx-filename-extension': [
+      'error',
+      {
+        extensions: ['.js', '.tsx', '.ts'],
+      },
+    ],
+    'react/forbid-prop-types': 'off',
+    camelcase: 'warn',
+    'react/destructuring-assignment': [
+      'error',
+      'always',
+      {
+        ignoreClassFields: true,
+      },
+    ],
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: [
+          '**/*.test.js',
+          '**/*.spec.js',
+          '**/*.story.js',
+          '**/webpack*.js',
+          '**/test*.js',
+          '**/*.test.tsx',
+          '**/*.spec.tsx',
+          '**/*.story.tsx',
+        ],
+      },
+    ],
+    'global-require': 'off',
+    'import/no-dynamic-require': 'off',
+    'promise/catch-or-return': [
+      'error',
+      {
+        allowThen: true,
+        terminationMethod: ['done', 'catch', 'asCallback', 'finally'],
+      },
+    ],
+    quotes: ['warn', 'single'],
+    'promise/no-callback-in-promise': 'off',
+    'react/jsx-wrap-multilines': 'off',
+    'import/order': [
+      'warn',
+      {
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+        ],
+        'newlines-between': 'always',
+      },
+    ],
+    'no-unneeded-ternary': 'warn',
+    'no-irregular-whitespace': 'warn',
+    'prefer-object-spread': 'warn',
+    'max-classes-per-file': 'warn',
+    'react/jsx-curly-brace-presence': 'warn',
+    'react/jsx-boolean-value': 'warn',
+    'react/jsx-props-no-spreading': 'warn',
+    'react/jsx-fragments': 'warn',
+    'react/jsx-curly-newline': 'warn',
+    'react/state-in-constructor': 'warn',
+    'import/no-unresolved': 'error',
+    'import/named': 'error',
+    'import/newline-after-import': 'warn',
+    'import/first': 'warn',
+    'jest/no-test-prefixes': 'warn',
+    'jsx-a11y/control-has-associated-label': 'warn',
+    'unicorn/no-zero-fractions': 'warn',
+    'unicorn/filename-case': 'off',
+    'promise/no-return-wrap': 'warn',
+    'prettier/prettier': 'warn', // it needs to stay in the end of rules list
+  },
+};
