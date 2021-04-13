@@ -1,18 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 import { createStore } from 'redux';
 
-import { App } from './app/App';
 import { reportWebVitals } from './reportWebVitals';
 import { rootReducer } from './app/reducer';
-import './index.css';
+import { getRoutes } from './app/routes';
+import { NavBar } from './app/shared/NavBar/NavBar';
+import { GlobalStyle } from './index.css';
 
 const store = createStore(rootReducer);
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <GlobalStyle />
+    <NavBar />
+    <div style={{ marginTop: 64, padding: 24, width: '100%', height: '100%' }}>
+      <BrowserRouter>{getRoutes()}</BrowserRouter>
+    </div>
   </Provider>,
   document.querySelector('#root'),
 );

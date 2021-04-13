@@ -109,6 +109,7 @@ module.exports = {
     'react/jsx-fragments': 'warn',
     'react/jsx-curly-newline': 'warn',
     'react/state-in-constructor': 'warn',
+    'react-perf/jsx-no-new-object-as-prop': 'off',
     'import/no-unresolved': 'error',
     'import/named': 'error',
     'import/newline-after-import': 'warn',
