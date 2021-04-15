@@ -1,11 +1,19 @@
 import { combineReducers } from 'redux';
 
+import { SET_BREAKPOINT } from './constants';
+
 const initialState = {
-  deviceType: 'mobile',
+  breakpoint: 'sm',
 };
 
-const appReducer = (state = initialState) => {
-  return state;
+const appReducer = (state = initialState, action) => {
+  const { type, payload } = action;
+  return type === SET_BREAKPOINT
+    ? {
+        ...state,
+        breakpoint: payload.breakpoint,
+      }
+    : state;
 };
 const reducers = {
   app: appReducer,

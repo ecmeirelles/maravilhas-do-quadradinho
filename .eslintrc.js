@@ -17,7 +17,7 @@ module.exports = {
       jsx: true,
     },
     ecmaVersion: 12,
-    sourceType: "module",
+    sourceType: 'module',
   },
   plugins: [
     'react',
@@ -29,9 +29,8 @@ module.exports = {
     'prettier',
   ],
   rules: {
-    "indent": ["error", 2],
-    "comma-dangle": 0,
-    "prefer-destructuring": 0,
+    'comma-dangle': 0,
+    'prefer-destructuring': 0,
     'react/jsx-no-target-blank': [
       'error',
       {
@@ -110,6 +109,7 @@ module.exports = {
     'react/jsx-curly-newline': 'warn',
     'react/state-in-constructor': 'warn',
     'react-perf/jsx-no-new-object-as-prop': 'off',
+    'react-perf/jsx-no-new-function-as-prop': 'off',
     'import/no-unresolved': 'error',
     'import/named': 'error',
     'import/newline-after-import': 'warn',
@@ -117,7 +117,11 @@ module.exports = {
     'jest/no-test-prefixes': 'warn',
     'jsx-a11y/control-has-associated-label': 'warn',
     'unicorn/no-zero-fractions': 'warn',
+    'unicorn/no-array-reduce': 'off',
+    'unicorn/no-null': 'off',
     'unicorn/filename-case': 'off',
+    'unicorn/prevent-abbreviations': 'off',
+    'unicorn/consistent-function-scoping': 'off',
     'promise/no-return-wrap': 'warn',
     'prettier/prettier': 'warn', // it needs to stay in the end of rules list
   },

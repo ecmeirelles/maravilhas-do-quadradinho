@@ -1,25 +1,17 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
-import logo from '../client/logo.svg';
-import './App.css';
+import { AppWrapperSt } from './App.css';
+import { getRoutes } from './routes';
+import { NavBar } from './shared/NavBar/NavBar';
 
 export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div>
+        <NavBar />
+        <AppWrapperSt>{getRoutes()}</AppWrapperSt>
+      </div>
+    </BrowserRouter>
   );
 };
